@@ -11,7 +11,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">
-            <Link href="/" className="text-lg font-semibold">DROGY MIDEJ</Link>
+            <Link href="/" className="text-lg font-semibold">Hlas proti drogám</Link>
 
             <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
