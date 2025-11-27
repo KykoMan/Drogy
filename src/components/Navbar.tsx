@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import navItems from "@/utils/navbrar";
+import navItems, { NavItem } from "@/utils/navbrar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function Navbar() {
             <Link href="/" className="text-lg font-semibold">Hlas proti drogám</Link>
 
             <div className="hidden md:flex items-center space-x-6">
-              {navItems.map((item) => (
+              {navItems.map((item: NavItem) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -28,8 +28,7 @@ export default function Navbar() {
 
           <div className="flex items-center">
             <div className="hidden md:flex items-center space-x-3">
-              <Link href="/login" className="px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 text-sm">Přihlásit</Link>
-              <Link href="/signup" className="px-3 py-1 rounded-md bg-blue-600 text-white text-sm">Zaregistrovat</Link>
+              {/* signup removed - site doesn't use registration */}
             </div>
 
             <button
@@ -52,7 +51,7 @@ export default function Navbar() {
         {open && (
           <div className="md:hidden py-2">
             <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
+              {navItems.map((item: NavItem) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -63,7 +62,7 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <Link href="/login" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Přihlásit</Link>
+              {/* Login removed - not used on site */}
             </div>
           </div>
         )}

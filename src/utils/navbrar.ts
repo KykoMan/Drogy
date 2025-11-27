@@ -4,9 +4,10 @@ export type NavItem = {
 };
 
 const navItems: NavItem[] = [
-	{ title: "O projektu", href: "/about" },
-	{ title: "Rozhovory", href: "/interviews" },
+	{ title: "O projektu", href: "/aboutUs" },
+	{ title: "Typy drog", href: "/drugs" },
 	{ title: "Kontakty", href: "/contact" },
+	{ title: "minihra", href: "/minigame" },
 ];
 
 export default navItems;
