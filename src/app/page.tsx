@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <div className="font-sans text-gray-800">
 
+      {/* Hero sekce */}
       <section className="bg-[#F58549] relative">
         <div className="flex justify-center pt-10 pb-6">
           <picture className="w-full max-w-3xl">
@@ -15,8 +16,8 @@ export default function Home() {
           </picture>
         </div>
         <div className='flex flex-col items-center text-center pb-16 px-4'>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-20 text-white drop-shadow-lg">Vítejte na našem webu</h1>
-          
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Vítejte na našem webu</h1>
+          <p className="text-lg md:text-xl text-[#FFF3E0] mb-6 max-w-2xl drop-shadow-md">Tvůj život, tvoje volba – řekni drogám NE.</p>
           <Link href="/aboutUs" className="bg-[#FB8B24] hover:bg-[#E36414] text-white px-6 py-3 rounded-full transition-all shadow-lg transform hover:scale-105">
             Zjistit více
           </Link>
@@ -24,7 +25,7 @@ export default function Home() {
       </section>
 
       {/* Druhá sekce s obsahem */}
-      <section className="py-24 bg-gradient-to-b from-white to-[#FFF4EA]">
+      <section className="py-24 bg-linear-to-b from-white to-[#FFF4EA]">
   <div className="max-w-7xl mx-auto px-4 space-y-24">
 
     {/* BLOK 1 – Info karta */}
@@ -81,7 +82,7 @@ export default function Home() {
     </div>
 
     {/* BLOK 3 – Call to action */}
-    <div className="bg-[#F58549] rounded-3xl p-16 text-white text-center shadow-2xl">
+    <div className="bg-[#F58549] rounded-3xl p-14 text-white text-center shadow-2xl mb-16">
       <h3 className="text-4xl font-extrabold mb-4">
         Chceš vědět víc?
       </h3>
@@ -100,12 +101,12 @@ export default function Home() {
 </section>
 
       {/* Footer */}
-      <footer className="bg-[#E36414] text-white py-8 mt-16">
+      <footer className="bg-[#E36414] text-white py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-          <p>© 2025 Tvé jméno. Všechna práva vyhrazena.</p>
+          <p>© 2025 Kyberna projekt. Všechna práva vyhrazena.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/contact" className="hover:underline text-white">Kontakt</Link>
-            <Link href="/privacy" className="hover:underline text-white">Ochrana osobních údajů</Link>
+            <Link href="/privacy" className="hover:underline text-white">Ochrana osobních údajů</Link> {/* ještě nejsou ale třeba někdy */}
           </div>
         </div>
       </footer>
