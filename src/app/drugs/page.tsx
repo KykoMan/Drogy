@@ -6,7 +6,7 @@ const drugsData: Drug[] = [
   {
     id: 1,
     name: "Marihuana",
-    image: "/images/marihuana.jpg",
+    image: "/images/marihuanaD.png",
     description: "Nejrozšířenější ilegální droga, ovlivňuje vnímání a koordinaci.",
     addictionLevel: 30,
     usage: 45,
@@ -24,7 +24,7 @@ const drugsData: Drug[] = [
   {
     id: 3,
     name: "Pervitin",
-    image: "/images/pervitin.jpg",
+    image: "/images/pervitin.png",
     description: "Vysoce návyková stimulační droga s devastujícími účinky.",
     addictionLevel: 90,
     usage: 25,
@@ -33,7 +33,7 @@ const drugsData: Drug[] = [
   {
     id: 4,
     name: "Heroin",
-    image: "/images/heroin.jpg",
+    image: "/images/heroin.png",
     description: "Extrémně návyková opiátová droga s vysokým rizikem předávkování.",
     addictionLevel: 95,
     usage: 8,
