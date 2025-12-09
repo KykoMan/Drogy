@@ -7,7 +7,7 @@ const navItems: NavItem[] = [
 	{ title: "O projektu", href: "/aboutUs" },
 	{ title: "Typy drog", href: "/drugs" },
 	{ title: "Kontakty", href: "/contact" },
-	{ title: "minihra", href: "/minigame" },
+	{ title: "Minihra", href: "/minigame" },
 ];
 
 export default navItems;

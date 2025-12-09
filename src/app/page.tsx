@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <div className="font-sans text-gray-800">
 
-      {/* Hero sekce */}
       <section className="bg-[#F58549] relative">
         <div className="flex justify-center pt-10 pb-6">
           <picture className="w-full max-w-3xl">
@@ -16,10 +15,8 @@ export default function Home() {
           </picture>
         </div>
         <div className='flex flex-col items-center text-center pb-16 px-4'>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Vítejte na našem webu</h1>
-          <p className="text-lg md:text-xl text-[#FFF3E0] mb-6 max-w-2xl drop-shadow-md">
-            Tady můžeš napsat slogan nebo krátký úvodní text.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-20 text-white drop-shadow-lg">Vítejte na našem webu</h1>
+          
           <Link href="/aboutUs" className="bg-[#FB8B24] hover:bg-[#E36414] text-white px-6 py-3 rounded-full transition-all shadow-lg transform hover:scale-105">
             Zjistit více
           </Link>

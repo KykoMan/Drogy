@@ -6,7 +6,7 @@ const drugsData: Drug[] = [
   {
     id: 1,
     name: "Marihuana",
-    image: "/images/marihuanaD.png",
+    image: "/images/denisg.png",
     description: "Nejrozšířenější ilegální droga, ovlivňuje vnímání a koordinaci.",
     addictionLevel: 30,
     usage: 45,
