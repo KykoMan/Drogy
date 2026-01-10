@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Drug } from '../types/drug';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface DrugCardProps {
   drug: Drug;
@@ -21,7 +22,6 @@ export default function DrugCard({ drug }: DrugCardProps) {
 
   function getColorForPercent(percent: number) {
     const p = clamp(percent);
-    // Map 0 (green) -> 100 (red) via HSL hue (green 120 -> red 0)
     const hue = Math.round(120 - (p / 100) * 120);
     return `hsl(${hue}, 75%, 45%)`;
   }
@@ -43,7 +43,9 @@ export default function DrugCard({ drug }: DrugCardProps) {
       {/* Content */}
       <div className="p-6 space-y-5">
         <h3 className="text-2xl font-bold text-gray-900 tracking-tight">
-          {drug.name}
+          <Link href={`/drugs/${drug.id}`} className="hover:underline">
+            {drug.name}
+          </Link>
         </h3>
         <p className="text-gray-700 leading-relaxed text-sm">
           {drug.description}
@@ -102,6 +104,11 @@ export default function DrugCard({ drug }: DrugCardProps) {
               </li>
             ))}
           </ul>
+        </div>
+      <div className="pt-4">
+          <Link href={`/drugs/${drug.id}`} className="inline-block text-white bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-md text-sm">
+            Detail drogy
+          </Link>
         </div>
       </div>
     </div>

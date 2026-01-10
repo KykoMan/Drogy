@@ -1,13 +1,12 @@
 import Image from 'next/image';
 
 export default function QRDonate() {
-  // Show a static QR image. Upload a QR image at `public/images/qr-donate.png`.
   return (
     <div className="bg-white p-6 rounded-lg shadow-md text-center">
       <h3 className="text-lg font-semibold mb-4">Podpořte naši činnost</h3>
       <div className="p-4 inline-block rounded">
         <Image
-          src="/images/qr-donate.png"
+          src="/images/qr-donate.png" //doplnit chci dono přece xd
           alt="QR kód pro darování"
           width={192}
           height={192}

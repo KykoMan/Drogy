@@ -28,11 +28,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex items-center">
-            <div className="hidden md:flex items-center space-x-3">
-              {/* Signup removed - site doesn't use registration */}
-            </div>
-
             <button
               aria-label="Toggle navigation"
               aria-expanded={open}
@@ -48,7 +43,6 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-        </div>
 
         {open && (
           <div className="md:hidden py-2">
@@ -63,8 +57,6 @@ export default function Navbar() {
                   {item.title}
                 </Link>
               ))}
-
-              {/* Login removed - not used on site */}
             </div>
           </div>
         )}
