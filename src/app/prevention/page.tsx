@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 
 export default function PreventionPage() {
   return (
     <Layout title="Prevence - Hlas proti drogám">
-      <header className="bg-gradient-to-r from-orange-100 to-orange-50 border-b border-orange-200">
+      <header className="bg-linear-to-r from-orange-100 to-orange-50 border-b border-orange-200">
         <div className="max-w-7xl mx-auto px-4 py-10">
           <h1 className="text-4xl font-extrabold text-gray-900">Prevence</h1>
           <p className="mt-3 max-w-3xl text-gray-700">
@@ -48,16 +49,16 @@ export default function PreventionPage() {
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Ilustrační galerie</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-gray-200">
               <Image src="/images/marihuana.jpg" alt="Ilustrace marihuana" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-gray-200">
               <Image src="/images/pervitin.png" alt="Ilustrace pervitin" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-gray-200">
               <Image src="/images/heroin.png" alt="Ilustrace heroin" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
+            <div className="relative aspect-4/3 rounded-lg overflow-hidden border border-gray-200">
               <Image src="/images/marihuanaD.png" alt="Ilustrace list" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
             </div>
           </div>
@@ -78,7 +79,7 @@ export default function PreventionPage() {
         </section>
 
         <footer className="text-sm text-gray-500">
-          Další zdroje: <a className="underline text-orange-700" href="/drugs">Přehled drog</a> · <a className="underline text-orange-700" href="/contact">Kontakt</a>
+          Další zdroje: <Link className="underline text-orange-700" href="/drugs">Přehled drog</Link> · <Link className="underline text-orange-700" href="/contact">Kontakt</Link>
         </footer>
       </main>
     </Layout>

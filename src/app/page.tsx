@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,9 +9,11 @@ export default function Home() {
       <section className="bg-[#F58549] relative">
         <div className="flex justify-center pt-10 pb-6">
           <picture className="w-full max-w-3xl">
-            <img 
-              src="../../images/HlasProtiDrogam.png"
+            <Image 
+              src="/images/HlasProtiDrogam.png"
               alt="ZahradnikUvodniStranka" 
+              width={1200}
+              height={600}
               className='w-full object-cover rounded-lg shadow-2xl'
             />
           </picture>

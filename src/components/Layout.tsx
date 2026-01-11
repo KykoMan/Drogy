@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { LayoutProps } from '../types/common';
 
+/**
+ * Layout component that wraps pages with consistent styling and metadata.
+ */
 export default function Layout({ children, title = "Hlas proti drogám" }: LayoutProps) {
   return (
     <>

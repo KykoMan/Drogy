@@ -45,7 +45,7 @@ export default function Kontakt() {
   return (
     <Layout title="Kontakt – Hlas proti drogám">
       {/* Hero */}
-      <header className="bg-gradient-to-r from-orange-300/40 to-orange-100/60 border-b border-orange-300/60">
+      <header className="bg-linear-to-r from-orange-300/40 to-orange-100/60 border-b border-orange-300/60">
         <div className="max-w-7xl mx-auto px-4 py-14">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">Ozvěte se nám</h1>
           <p className="mt-3 max-w-3xl text-gray-700">
@@ -78,9 +78,9 @@ export default function Kontakt() {
 
             <div className="bg-orange-50 rounded-2xl border border-orange-200 p-6">
               <h3 className="font-semibold text-gray-900 mb-2">Rychlá pomoc</h3>
-              <p className="text-sm text-gray-700">
-                <strong>Akutní stav?</strong> Volejte záchrannou službu 155. V případě anonymní konzultace napište do zprávy „ANONYM".
-              </p>
+                <p className="text-sm text-gray-700">
+                  <strong>Akutní stav?</strong> Volejte záchrannou službu 155. V případě anonymní konzultace napište do zprávy {`"ANONYM"`}.
+                </p>
             </div>
 
             <div className="rounded-2xl border border-gray-200 p-6">

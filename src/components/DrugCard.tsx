@@ -9,6 +9,9 @@ interface DrugCardProps {
   drug: Drug;
 }
 
+/**
+ * Component displaying a card with drug information.
+ */
 export default function DrugCard({ drug }: DrugCardProps) {
   const [imageSrc, setImageSrc] = useState(drug.image || '/images/Denis.png');
 

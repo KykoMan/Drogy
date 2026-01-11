@@ -1,3 +1,6 @@
+/**
+ * Interface representing a drug entity.
+ */
 export interface Drug {
   id: number;
   name: string;

@@ -92,7 +92,7 @@ export default async function DrugDetailPage({ params }: PageProps) {
       <article className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Media */}
         <div className="lg:col-span-1">
-          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow">
+          <div className="relative w-full aspect-4/3 rounded-xl overflow-hidden shadow">
             <Image
               src={drug.image}
               alt={drug.name}

@@ -7,7 +7,7 @@ export default function AboutPage() {
     <Layout title="O nás – Hlas proti drogám">
       {/* Hero */}
       <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-300/40 to-orange-100/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-orange-300/40 to-orange-100/60" />
         <div className="max-w-7xl mx-auto px-4 py-16 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>

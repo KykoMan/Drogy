@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+/**
+ * Component displaying a QR code for donations.
+ */
 export default function QRDonate() {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md text-center">
