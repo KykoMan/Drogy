@@ -6,12 +6,12 @@ import Layout from "@/components/Layout";
 export const metadata: Metadata = {
   title: "Prevence",
   description:
-    "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
+    "Praktické tipy, jak předcházet závislostem a užívání drog: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
   alternates: { canonical: "/prevention" },
   openGraph: {
     title: "Prevence – Hlas proti drogám",
     description:
-      "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
+      "Praktické tipy, jak předcházet závislostem a užívání drog: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
     url: "/prevention",
     type: "website",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prevence – Hlas proti drogám",
     description:
-      "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
+      "Praktické tipy, jak předcházet závislostem a užívání drog: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
     images: ["/images/HlasProtiDrogam.png"],
   },
 };

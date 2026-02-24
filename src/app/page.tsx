@@ -5,12 +5,12 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Hlas proti drogám",
   description:
-    "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
+    "Tvůj život, tvoje volba – řekni drogám NE. Informace o drogách, prevence a pomoc v boji proti návykovým látkám.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Hlas proti drogám",
     description:
-      "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
+      "Tvůj život, tvoje volba – řekni drogám NE. Informace o drogách, prevence a pomoc v boji proti návykovým látkám.",
     url: "/",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hlas proti drogám",
     description:
-      "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
+      "Tvůj život, tvoje volba – řekni drogám NE. Informace o drogách, prevence a pomoc v boji proti návykovým látkám.",
     images: ["/images/HlasProtiDrogam.png"],
   },
 };

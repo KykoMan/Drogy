@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Hlas proti drogám",
   },
   description:
-    "Hlas proti drogám – informace, prevence a zdroje pomoci proti užívání návykových látek.",
+    "Hlas proti drogám – informace o drogách, prevence a zdroje pomoci proti užívání návykových látek.",
   alternates: {
     canonical: "/",
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: "/",
     title: "Hlas proti drogám",
     description:
-      "Hlas proti drogám – informace, prevence a zdroje pomoci proti užívání návykových látek.",
+      "Hlas proti drogám – informace o drogách, prevence a zdroje pomoci proti užívání návykových látek.",
     siteName: "Hlas proti drogám",
     images: [
       {
@@ -68,6 +68,7 @@ export const metadata: Metadata = {
     initialScale: 1,
     viewportFit: "cover",
   },
+  keywords: ["drogy", "prevence", "informace", "pomoc", "návykové látky"],
   themeColor: "#F58549",
   icons: {
     icon: [

@@ -2,23 +2,28 @@
 
 import type { Metadata } from "next";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Script from "next/script";
 import Layout from "../../components/Layout";
 
 export const metadata: Metadata = {
   title: "Kontakt – Hlas proti drogám",
   description:
-    "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+    "Kontaktujte nás ohledně drog, drogové prevence a poradenství – rychlá pomoc, konzultace a informace 24/7. Kontakt přes formulář, e‑mail nebo telefon.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Kontakt – Hlas proti drogám",
     description:
-      "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+      "Kontaktujte nás ohledně drog, drogové prevence a poradenství – rychlá pomoc, konzultace a informace 24/7. Kontakt přes formulář, e‑mail nebo telefon.",
     url: "/contact",
     type: "website",
+    siteName: "Hlas proti drogám",
+    locale: "cs_CZ",
     images: [
       {
         url: "/images/HlasProtiDrogam.png",
         alt: "Hlas proti drogám",
+        width: 1200,
+        height: 630,
       },
     ],
   },
@@ -26,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kontakt – Hlas proti drogám",
     description:
-      "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+      "Kontaktujte nás ohledně drog, drogové prevence a poradenství – rychlá pomoc, konzultace a informace 24/7. Kontakt přes formulář, e‑mail nebo telefon.",
     images: ["/images/HlasProtiDrogam.png"],
   },
 };
@@ -79,6 +84,45 @@ export default function Kontakt() {
 
   return (
     <Layout>
+      <Script
+        id="ld-contact"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Kontakt – Hlas proti drogám',
+            url: 'https://hlasprotidrogam.cz/contact',
+            description:
+              'Kontaktujte nás ohledně drog, drogové prevence a poradenství – rychlá pomoc, konzultace a informace 24/7.',
+            inLanguage: 'cs-CZ',
+            isPartOf: {
+              '@type': 'WebSite',
+              name: 'Hlas proti drogám',
+              url: 'https://hlasprotidrogam.cz'
+            },
+            primaryImageOfPage: {
+              '@type': 'ImageObject',
+              url: 'https://hlasprotidrogam.cz/images/HlasProtiDrogam.png',
+              width: 1200,
+              height: 630
+            },
+            about: {
+              '@type': 'Organization',
+              name: 'Hlas proti drogám',
+              url: 'https://hlasprotidrogam.cz',
+              email: 'info@hlasprotidrogam.cz',
+              contactPoint: [{
+                '@type': 'ContactPoint',
+                contactType: 'customer support',
+                telephone: '+420123456789',
+                areaServed: 'CZ',
+                availableLanguage: ['cs']
+              }]
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <header className="bg-linear-to-r from-orange-300/40 to-orange-100/60 border-b border-orange-300/60">
         <div className="max-w-7xl mx-auto px-4 py-14">
