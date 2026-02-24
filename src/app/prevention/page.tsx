@@ -7,11 +7,29 @@ export const metadata: Metadata = {
   title: "Prevence",
   description: "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
   alternates: { canonical: "/prevention" },
+  openGraph: {
+    title: "Prevence – Hlas proti drogám",
+    description: "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
+    url: "/prevention",
+    type: "website",
+    images: [
+      {
+        url: "/images/HlasProtiDrogam.png",
+        alt: "Hlas proti drogám",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prevence – Hlas proti drogám",
+    description: "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
+    images: ["/images/HlasProtiDrogam.png"],
+  },
 };
 
 export default function PreventionPage() {
   return (
-    <Layout title="Prevence - Hlas proti drogám">
+    <Layout>
       <header className="bg-linear-to-r from-orange-100 to-orange-50 border-b border-orange-200">
         <div className="max-w-7xl mx-auto px-4 py-10">
           <h1 className="text-4xl font-extrabold text-gray-900">Prevence</h1>

@@ -7,11 +7,29 @@ export const metadata: Metadata = {
   title: "O nás",
   description: "Kdo jsme, jak pomáháme a proč existuje iniciativa Hlas proti drogám. Naše mise, hodnoty a tým.",
   alternates: { canonical: "/aboutUs" },
+  openGraph: {
+    title: "O nás – Hlas proti drogám",
+    description: "Kdo jsme, jak pomáháme a proč existuje iniciativa Hlas proti drogám. Naše mise, hodnoty a tým.",
+    url: "/aboutUs",
+    type: "website",
+    images: [
+      {
+        url: "/images/HlasProtiDrogam.png",
+        alt: "Hlas proti drogám",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "O nás – Hlas proti drogám",
+    description: "Kdo jsme, jak pomáháme a proč existuje iniciativa Hlas proti drogám. Naše mise, hodnoty a tým.",
+    images: ["/images/HlasProtiDrogam.png"],
+  },
 };
 
 export default function AboutPage() {
   return (
-    <Layout title="O nás – Hlas proti drogám">
+    <Layout>
       {/* Hero */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-orange-300/40 to-orange-100/60" />

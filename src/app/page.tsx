@@ -6,6 +6,26 @@ export const metadata: Metadata = {
   title: "Hlas proti drogám",
   description: "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "Hlas proti drogám",
+    description: "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: "/images/HlasProtiDrogam.png",
+        alt: "Hlas proti drogám",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hlas proti drogám",
+    description: "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
+    images: ["/images/HlasProtiDrogam.png"],
+  },
 };
 
 export default function Home() {

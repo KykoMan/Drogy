@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "404 – Stránka nenalezena",
+  description: "Omlouváme se, hledaná stránka neexistuje nebo byla přesunuta.",
+  alternates: { canonical: "/404" },
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

@@ -7,6 +7,24 @@ export const metadata: Metadata = {
   title: 'Přehled drog',
   description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
   alternates: { canonical: '/drugs' },
+  openGraph: {
+    title: 'Přehled drog – Hlas proti drogám',
+    description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
+    url: '/drugs',
+    type: 'website',
+    images: [
+      {
+        url: '/images/HlasProtiDrogam.png',
+        alt: 'Hlas proti drogám',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Přehled drog – Hlas proti drogám',
+    description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
+    images: ['/images/HlasProtiDrogam.png'],
+  },
 };
 
 const drugsData: Drug[] = [
@@ -50,7 +68,7 @@ const drugsData: Drug[] = [
 
 export default function DrogyPage() {
   return (
-    <Layout title="Přehled drog - Hlas proti drogám">
+    <Layout>
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-8">Přehled drog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

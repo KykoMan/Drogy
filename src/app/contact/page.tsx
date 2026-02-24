@@ -1,7 +1,32 @@
 "use client";
 
+import type { Metadata } from "next";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Layout from "../../components/Layout";
+
+export const metadata: Metadata = {
+  title: "Kontakt – Hlas proti drogám",
+  description: "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Kontakt – Hlas proti drogám",
+    description: "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+    url: "/contact",
+    type: "website",
+    images: [
+      {
+        url: "/images/HlasProtiDrogam.png",
+        alt: "Hlas proti drogám",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kontakt – Hlas proti drogám",
+    description: "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+    images: ["/images/HlasProtiDrogam.png"],
+  },
+};
 
 export default function Kontakt() {
   const [name, setName] = useState("");
@@ -43,7 +68,7 @@ export default function Kontakt() {
   }
 
   return (
-    <Layout title="Kontakt – Hlas proti drogám">
+    <Layout>
       {/* Hero */}
       <header className="bg-linear-to-r from-orange-300/40 to-orange-100/60 border-b border-orange-300/60">
         <div className="max-w-7xl mx-auto px-4 py-14">
