@@ -1,4 +1,4 @@
-import { LayoutProps } from '../types/common';
+import { LayoutProps } from "../types/common";
 
 /**
  * Visual layout wrapper. Metadata is handled via Next.js metadata API per route.
@@ -9,4 +9,4 @@ export default function Layout({ children }: LayoutProps) {
       <main>{children}</main>
     </div>
   );
-} 
+}

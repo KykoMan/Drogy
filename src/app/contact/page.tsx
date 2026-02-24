@@ -6,11 +6,13 @@ import Layout from "../../components/Layout";
 
 export const metadata: Metadata = {
   title: "Kontakt – Hlas proti drogám",
-  description: "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+  description:
+    "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Kontakt – Hlas proti drogám",
-    description: "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+    description:
+      "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
     url: "/contact",
     type: "website",
     images: [
@@ -23,7 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kontakt – Hlas proti drogám",
-    description: "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
+    description:
+      "Kontaktujte nás přes formulář, telefon nebo e‑mail. Pomoc a informace jsou k dispozici 24/7.",
     images: ["/images/HlasProtiDrogam.png"],
   },
 };
@@ -37,7 +40,9 @@ export default function Kontakt() {
   const [priority, setPriority] = useState(50);
   const [message, setMessage] = useState("");
   const [agree, setAgree] = useState(false);
-  const [contactMethod, setContactMethod] = useState<"email" | "phone">("email");
+  const [contactMethod, setContactMethod] = useState<"email" | "phone">(
+    "email",
+  );
   const [file, setFile] = useState<File | null>(null);
   const nameRef = useRef<HTMLInputElement | null>(null);
 
@@ -51,7 +56,12 @@ export default function Kontakt() {
     };
     const passed = Object.values(checks).filter(Boolean).length;
     const total = Object.keys(checks).length;
-    return { checks, passed, total, percent: Math.round((passed / total) * 100) };
+    return {
+      checks,
+      passed,
+      total,
+      percent: Math.round((passed / total) * 100),
+    };
   }, [name, email, message, agree]);
 
   useEffect(() => {
@@ -63,7 +73,7 @@ export default function Kontakt() {
     if (validity.passed < validity.total) return;
     alert(
       `Děkujeme, ${name}! Ozveme se přes ${contactMethod === "email" ? "e-mail" : "telefon"}.` +
-        (file ? `\nPříloha: ${file.name}` : "")
+        (file ? `\nPříloha: ${file.name}` : ""),
     );
   }
 
@@ -72,9 +82,12 @@ export default function Kontakt() {
       {/* Hero */}
       <header className="bg-linear-to-r from-orange-300/40 to-orange-100/60 border-b border-orange-300/60">
         <div className="max-w-7xl mx-auto px-4 py-14">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">Ozvěte se nám</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+            Ozvěte se nám
+          </h1>
           <p className="mt-3 max-w-3xl text-gray-700">
-            Ať už hledáte pomoc, chcete nahlásit rizikové chování, nebo máte dotaz k našim programům – jsme připraveni naslouchat.
+            Ať už hledáte pomoc, chcete nahlásit rizikové chování, nebo máte
+            dotaz k našim programům – jsme připraveni naslouchat.
           </p>
         </div>
       </header>
@@ -84,33 +97,43 @@ export default function Kontakt() {
           {/* Aside info */}
           <aside className="lg:col-span-1 space-y-6">
             <div className="bg-white rounded-2xl border border-orange-200 p-6 shadow-sm">
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Kontaktní informace</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                Kontaktní informace
+              </h2>
               <ul className="text-sm text-gray-700 space-y-2">
                 <li>
-                  <span className="font-semibold">Adresa:</span> Na Poříčí 1070/10, 110 00 Praha 1
+                  <span className="font-semibold">Adresa:</span> Na Poříčí
+                  1070/10, 110 00 Praha 1
                 </li>
                 <li>
-                  <span className="font-semibold">Telefon:</span> +420 123 456 789
+                  <span className="font-semibold">Telefon:</span> +420 123 456
+                  789
                 </li>
                 <li>
-                  <span className="font-semibold">Email:</span> info@hlasprotidrogam.cz
+                  <span className="font-semibold">Email:</span>{" "}
+                  info@hlasprotidrogam.cz
                 </li>
                 <li>
-                  <span className="font-semibold">Nonstop linka:</span> 800 123 456
+                  <span className="font-semibold">Nonstop linka:</span> 800 123
+                  456
                 </li>
               </ul>
             </div>
 
             <div className="bg-orange-50 rounded-2xl border border-orange-200 p-6">
               <h3 className="font-semibold text-gray-900 mb-2">Rychlá pomoc</h3>
-                <p className="text-sm text-gray-700">
-                  <strong>Akutní stav?</strong> Volejte záchrannou službu 155. V případě anonymní konzultace napište do zprávy {`"ANONYM"`}.
-                </p>
+              <p className="text-sm text-gray-700">
+                <strong>Akutní stav?</strong> Volejte záchrannou službu 155. V
+                případě anonymní konzultace napište do zprávy {`"ANONYM"`}.
+              </p>
             </div>
 
             <div className="rounded-2xl border border-gray-200 p-6">
               <h3 className="font-semibold text-gray-900 mb-2">GDPR</h3>
-              <p className="text-sm text-gray-700">Vaše data zpracováváme pouze pro účely odpovědi na dotaz a dle potřebné legislativy.</p>
+              <p className="text-sm text-gray-700">
+                Vaše data zpracováváme pouze pro účely odpovědi na dotaz a dle
+                potřebné legislativy.
+              </p>
             </div>
           </aside>
 
@@ -118,13 +141,26 @@ export default function Kontakt() {
           <section className="lg:col-span-2">
             <div className="bg-white rounded-2xl border border-orange-200 p-6 shadow-sm">
               <div className="flex items-center justify-between gap-6 flex-wrap">
-                <h2 className="text-xl font-semibold text-gray-900">Kontaktní formulář</h2>
+                <h2 className="text-xl font-semibold text-gray-900">
+                  Kontaktní formulář
+                </h2>
                 {/* Progress */}
                 <div className="w-full sm:w-64">
-                  <div className="h-2 bg-gray-200 rounded-full" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={validity.percent}>
-                    <div className="h-2 bg-orange-500 rounded-full" style={{ width: `${validity.percent}%` }} />
+                  <div
+                    className="h-2 bg-gray-200 rounded-full"
+                    role="progressbar"
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={validity.percent}
+                  >
+                    <div
+                      className="h-2 bg-orange-500 rounded-full"
+                      style={{ width: `${validity.percent}%` }}
+                    />
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Vyplněno: {validity.percent}%</div>
+                  <div className="text-xs text-gray-600 mt-1">
+                    Vyplněno: {validity.percent}%
+                  </div>
                 </div>
               </div>
 
@@ -132,7 +168,12 @@ export default function Kontakt() {
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Jméno</label>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Jméno
+                    </label>
                     <input
                       ref={nameRef}
                       type="text"
@@ -142,10 +183,19 @@ export default function Kontakt() {
                       required
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
                     />
-                    {!validity.checks.name && <p className="text-xs text-red-600 mt-1">Uveďte alespoň 2 znaky.</p>}
+                    {!validity.checks.name && (
+                      <p className="text-xs text-red-600 mt-1">
+                        Uveďte alespoň 2 znaky.
+                      </p>
+                    )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Email
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -154,14 +204,23 @@ export default function Kontakt() {
                       required
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
                     />
-                    {!validity.checks.email && <p className="text-xs text-red-600 mt-1">Zadejte platný e-mail.</p>}
+                    {!validity.checks.email && (
+                      <p className="text-xs text-red-600 mt-1">
+                        Zadejte platný e-mail.
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 {/* Row 2 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="tel" className="block text-sm font-medium text-gray-700">Telefon</label>
+                    <label
+                      htmlFor="tel"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Telefon
+                    </label>
                     <input
                       type="tel"
                       id="tel"
@@ -172,7 +231,12 @@ export default function Kontakt() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="date" className="block text-sm font-medium text-gray-700">Preferované datum kontaktu</label>
+                    <label
+                      htmlFor="date"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Preferované datum kontaktu
+                    </label>
                     <input
                       type="date"
                       id="date"
@@ -186,7 +250,12 @@ export default function Kontakt() {
                 {/* Row 3 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="topic" className="block text-sm font-medium text-gray-700">Téma</label>
+                    <label
+                      htmlFor="topic"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Téma
+                    </label>
                     <select
                       id="topic"
                       value={topic}
@@ -199,14 +268,28 @@ export default function Kontakt() {
                     </select>
                   </div>
                   <div>
-                    <span className="block text-sm font-medium text-gray-700">Preferovaný způsob kontaktu</span>
+                    <span className="block text-sm font-medium text-gray-700">
+                      Preferovaný způsob kontaktu
+                    </span>
                     <div className="mt-2 flex items-center gap-6">
                       <label className="inline-flex items-center gap-2">
-                        <input type="radio" name="contact" value="email" checked={contactMethod === "email"} onChange={() => setContactMethod("email")} />
+                        <input
+                          type="radio"
+                          name="contact"
+                          value="email"
+                          checked={contactMethod === "email"}
+                          onChange={() => setContactMethod("email")}
+                        />
                         <span>Email</span>
                       </label>
                       <label className="inline-flex items-center gap-2">
-                        <input type="radio" name="contact" value="phone" checked={contactMethod === "phone"} onChange={() => setContactMethod("phone")} />
+                        <input
+                          type="radio"
+                          name="contact"
+                          value="phone"
+                          checked={contactMethod === "phone"}
+                          onChange={() => setContactMethod("phone")}
+                        />
                         <span>Telefon</span>
                       </label>
                     </div>
@@ -216,7 +299,12 @@ export default function Kontakt() {
                 {/* Row 4 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="priority" className="block text-sm font-medium text-gray-700">Naléhavost: {priority}%</label>
+                    <label
+                      htmlFor="priority"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Naléhavost: {priority}%
+                    </label>
                     <input
                       type="range"
                       id="priority"
@@ -228,7 +316,12 @@ export default function Kontakt() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="file" className="block text-sm font-medium text-gray-700">Příloha (volitelné)</label>
+                    <label
+                      htmlFor="file"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Příloha (volitelné)
+                    </label>
                     <input
                       type="file"
                       id="file"
@@ -240,7 +333,12 @@ export default function Kontakt() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Zpráva</label>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Zpráva
+                  </label>
                   <textarea
                     id="message"
                     rows={6}
@@ -249,11 +347,19 @@ export default function Kontakt() {
                     required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
                   />
-                  {!validity.checks.message && <p className="text-xs text-red-600 mt-1">Zpráva by měla mít alespoň 10 znaků.</p>}
+                  {!validity.checks.message && (
+                    <p className="text-xs text-red-600 mt-1">
+                      Zpráva by měla mít alespoň 10 znaků.
+                    </p>
+                  )}
                 </div>
 
                 <label className="inline-flex items-center gap-2">
-                  <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} />
+                  <input
+                    type="checkbox"
+                    checked={agree}
+                    onChange={(e) => setAgree(e.target.checked)}
+                  />
                   <span>Souhlasím se zpracováním osobních údajů</span>
                 </label>
 
@@ -265,7 +371,9 @@ export default function Kontakt() {
                   >
                     Odeslat zprávu
                   </button>
-                  <span className="text-xs text-gray-600">Vyplňte povinné položky pro odeslání.</span>
+                  <span className="text-xs text-gray-600">
+                    Vyplňte povinné položky pro odeslání.
+                  </span>
                 </div>
               </form>
             </div>

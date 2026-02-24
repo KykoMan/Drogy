@@ -1,7 +1,11 @@
 // dynamically generate a simple sitemap for all the routes we know about
 const deploymentUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || "localhost:3000";
-const siteUrl = (deploymentUrl.startsWith("http") ? deploymentUrl : `https://${deploymentUrl}`).replace(/\/+$/, "");
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.VERCEL_URL ||
+  "localhost:3000";
+const siteUrl = (
+  deploymentUrl.startsWith("http") ? deploymentUrl : `https://${deploymentUrl}`
+).replace(/\/+$/, "");
 
 export default function sitemap() {
   const staticPages = ["", "aboutUs", "prevention", "drugs", "contact"];

@@ -1,29 +1,32 @@
-import type { Metadata } from 'next';
-import Layout from '@/components/Layout';
-import DrugCard from '@/components/DrugCard';
-import { Drug } from '../../types/drug';
+import type { Metadata } from "next";
+import Layout from "@/components/Layout";
+import DrugCard from "@/components/DrugCard";
+import { Drug } from "../../types/drug";
 
 export const metadata: Metadata = {
-  title: 'Přehled drog',
-  description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
-  alternates: { canonical: '/drugs' },
+  title: "Přehled drog",
+  description:
+    "Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.",
+  alternates: { canonical: "/drugs" },
   openGraph: {
-    title: 'Přehled drog – Hlas proti drogám',
-    description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
-    url: '/drugs',
-    type: 'website',
+    title: "Přehled drog – Hlas proti drogám",
+    description:
+      "Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.",
+    url: "/drugs",
+    type: "website",
     images: [
       {
-        url: '/images/HlasProtiDrogam.png',
-        alt: 'Hlas proti drogám',
+        url: "/images/HlasProtiDrogam.png",
+        alt: "Hlas proti drogám",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Přehled drog – Hlas proti drogám',
-    description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
-    images: ['/images/HlasProtiDrogam.png'],
+    card: "summary_large_image",
+    title: "Přehled drog – Hlas proti drogám",
+    description:
+      "Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.",
+    images: ["/images/HlasProtiDrogam.png"],
   },
 };
 
@@ -32,10 +35,16 @@ const drugsData: Drug[] = [
     id: 1,
     name: "Marihuana",
     image: "/images/denisg.png",
-    description: "Nejrozšířenější ilegální droga, ovlivňuje vnímání a koordinaci.",
+    description:
+      "Nejrozšířenější ilegální droga, ovlivňuje vnímání a koordinaci.",
     addictionLevel: 30,
     usage: 45,
-    symptoms: ["Zčervenání očí", "Zhoršená paměť", "Zvýšená chuť k jídlu", "Zpomalené reakce"]
+    symptoms: [
+      "Zčervenání očí",
+      "Zhoršená paměť",
+      "Zvýšená chuť k jídlu",
+      "Zpomalené reakce",
+    ],
   },
   {
     id: 2,
@@ -44,7 +53,7 @@ const drugsData: Drug[] = [
     description: "Syntetická droga s stimulačními a halucinogenními účinky.",
     addictionLevel: 60,
     usage: 15,
-    symptoms: ["Dehydratace", "Zvýšená teplota", "Skřípání zubů", "Nespavost"]
+    symptoms: ["Dehydratace", "Zvýšená teplota", "Skřípání zubů", "Nespavost"],
   },
   {
     id: 3,
@@ -53,17 +62,23 @@ const drugsData: Drug[] = [
     description: "Vysoce návyková stimulační droga s devastujícími účinky.",
     addictionLevel: 90,
     usage: 25,
-    symptoms: ["Psychózy", "Úbytek váhy", "Paranoia", "Poškození orgánů"]
+    symptoms: ["Psychózy", "Úbytek váhy", "Paranoia", "Poškození orgánů"],
   },
   {
     id: 4,
     name: "Heroin",
     image: "/images/heroin.png",
-    description: "Extrémně návyková opiátová droga s vysokým rizikem předávkování.",
+    description:
+      "Extrémně návyková opiátová droga s vysokým rizikem předávkování.",
     addictionLevel: 95,
     usage: 8,
-    symptoms: ["Těžká závislost", "Respirační problémy", "Infekce", "Sociální izolace"]
-  }
+    symptoms: [
+      "Těžká závislost",
+      "Respirační problémy",
+      "Infekce",
+      "Sociální izolace",
+    ],
+  },
 ];
 
 export default function DrogyPage() {
@@ -72,7 +87,7 @@ export default function DrogyPage() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-8">Přehled drog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {drugsData.map(drug => (
+          {drugsData.map((drug) => (
             <DrugCard key={drug.id} drug={drug} />
           ))}
         </div>

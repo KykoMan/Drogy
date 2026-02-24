@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from 'react';
-import { Drug } from '../types/drug';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import { Drug } from "../types/drug";
+import Image from "next/image";
+import Link from "next/link";
 
 interface DrugCardProps {
   drug: Drug;
@@ -13,10 +13,10 @@ interface DrugCardProps {
  * Component displaying a card with drug information.
  */
 export default function DrugCard({ drug }: DrugCardProps) {
-  const [imageSrc, setImageSrc] = useState(drug.image || '/images/Denis.png');
+  const [imageSrc, setImageSrc] = useState(drug.image || "/images/Denis.png");
 
   function handleImageError() {
-    setImageSrc('/images/Denis.png');
+    setImageSrc("/images/Denis.png");
   }
 
   function clamp(val: number, min = 0, max = 100) {
@@ -73,7 +73,9 @@ export default function DrugCard({ drug }: DrugCardProps) {
                 }}
               />
             </div>
-            <span className="text-xs text-gray-500">{drug.addictionLevel}%</span>
+            <span className="text-xs text-gray-500">
+              {drug.addictionLevel}%
+            </span>
           </div>
 
           <div>
@@ -99,17 +101,25 @@ export default function DrugCard({ drug }: DrugCardProps) {
 
         {/* Symptoms */}
         <div className="pt-2">
-          <h4 className="font-semibold text-gray-900 mb-2 text-sm border-b border-gray-200 pb-1">Příznaky:</h4>
+          <h4 className="font-semibold text-gray-900 mb-2 text-sm border-b border-gray-200 pb-1">
+            Příznaky:
+          </h4>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 pl-3">
             {drug.symptoms.map((symptom, index) => (
-              <li key={index} className="bg-gray-50 px-2 py-1 rounded-md border-l-4 border-orange-500">
+              <li
+                key={index}
+                className="bg-gray-50 px-2 py-1 rounded-md border-l-4 border-orange-500"
+              >
                 {symptom}
               </li>
             ))}
           </ul>
         </div>
-      <div className="pt-4">
-          <Link href={`/drugs/${drug.id}`} className="inline-block text-white bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-md text-sm">
+        <div className="pt-4">
+          <Link
+            href={`/drugs/${drug.id}`}
+            className="inline-block text-white bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-md text-sm"
+          >
             Detail drogy
           </Link>
         </div>

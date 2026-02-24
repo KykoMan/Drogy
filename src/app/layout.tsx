@@ -14,8 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 // Build absolute site URL for canonical/OGP
-const deploymentUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || "localhost:3000";
-const siteUrl = (deploymentUrl.startsWith("http") ? deploymentUrl : `https://${deploymentUrl}`).replace(/\/+$/, "");
+const deploymentUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  process.env.VERCEL_URL ||
+  "localhost:3000";
+const siteUrl = (
+  deploymentUrl.startsWith("http") ? deploymentUrl : `https://${deploymentUrl}`
+).replace(/\/+$/, "");
 const logoUrl = new URL("/images/HlasProtiDrogam.png", siteUrl).toString();
 
 export const metadata: Metadata = {

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-
 interface PageProps {
   params: Promise<{ id: string }>;
 }
@@ -60,9 +59,9 @@ const drugsData = [
 ] as const;
 
 /** vygeneruje [id] stránku */
-export async function generateMetadata(
-  { params }: PageProps
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { id } = await params;
   const drug = drugsData.find((d) => d.id === Number(id));
   const title = drug ? `${drug.name} – detail` : `Droga #${id} – nenalezena`;
@@ -77,10 +76,10 @@ export async function generateMetadata(
       description,
       url: path,
       images: drug ? [{ url: drug.image, alt: drug.name }] : undefined,
-      type: 'article',
+      type: "article",
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: drug ? [drug.image] : undefined,
@@ -96,8 +95,12 @@ export default async function DrugDetailPage({ params }: PageProps) {
     return (
       <main className="max-w-5xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-4">Položka nenalezena</h1>
-        <p className="text-gray-600 mb-6">Zvolená droga neexistuje nebo byla odstraněna.</p>
-        <Link href="/drugs" className="underline text-orange-600">Zpět na přehled</Link>
+        <p className="text-gray-600 mb-6">
+          Zvolená droga neexistuje nebo byla odstraněna.
+        </p>
+        <Link href="/drugs" className="underline text-orange-600">
+          Zpět na přehled
+        </Link>
       </main>
     );
   }
@@ -122,8 +125,12 @@ export default async function DrugDetailPage({ params }: PageProps) {
         {/* Content */}
         <div className="lg:col-span-2 space-y-6">
           <header>
-            <h1 className="text-4xl font-extrabold text-gray-900">{drug.name}</h1>
-            <p className="mt-3 text-gray-700 leading-relaxed">{drug.description}</p>
+            <h1 className="text-4xl font-extrabold text-gray-900">
+              {drug.name}
+            </h1>
+            <p className="mt-3 text-gray-700 leading-relaxed">
+              {drug.description}
+            </p>
           </header>
 
           <section>
@@ -138,13 +145,17 @@ export default async function DrugDetailPage({ params }: PageProps) {
           <section className="bg-orange-50 border border-orange-200 rounded-xl p-5">
             <h3 className="font-semibold mb-2">Potřebujete pomoc?</h3>
             <p>
-              Ozvěte se odborné lince pomoci. <strong>Pomoc existuje</strong> a může být prvním krokem ke změně. Pokud si nejste jisti,
+              Ozvěte se odborné lince pomoci. <strong>Pomoc existuje</strong> a
+              může být prvním krokem ke změně. Pokud si nejste jisti,
               <em> kontaktujte nás anonymně</em> přes formulář v sekci Kontakt.
             </p>
           </section>
 
           <footer className="pt-2">
-            <Link href="/drugs" className="inline-block text-white bg-orange-600 hover:bg-orange-700 px-5 py-2 rounded-md">
+            <Link
+              href="/drugs"
+              className="inline-block text-white bg-orange-600 hover:bg-orange-700 px-5 py-2 rounded-md"
+            >
               Zpět na přehled drog
             </Link>
           </footer>

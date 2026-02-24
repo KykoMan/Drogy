@@ -14,8 +14,18 @@ export default function NotFound() {
       <h1 className="text-5xl font-extrabold text-gray-900">404</h1>
       <p className="mt-3 text-gray-700">Stránka nebyla nalezena.</p>
       <div className="mt-6 flex items-center justify-center gap-4">
-        <Link href="/" className="px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700">Domů</Link>
-        <Link href="/drugs" className="px-5 py-2 rounded-md border border-orange-300 text-orange-700 hover:bg-orange-50">Přehled drog</Link>
+        <Link
+          href="/"
+          className="px-5 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700"
+        >
+          Domů
+        </Link>
+        <Link
+          href="/drugs"
+          className="px-5 py-2 rounded-md border border-orange-300 text-orange-700 hover:bg-orange-50"
+        >
+          Přehled drog
+        </Link>
       </div>
     </main>
   );
