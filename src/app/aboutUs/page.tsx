@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import QRDonate from "@/components/QRDonate";
+
+export const metadata: Metadata = {
+  title: "O nás",
+  description: "Kdo jsme, jak pomáháme a proč existuje iniciativa Hlas proti drogám. Naše mise, hodnoty a tým.",
+  alternates: { canonical: "/aboutUs" },
+};
 
 export default function AboutPage() {
   return (

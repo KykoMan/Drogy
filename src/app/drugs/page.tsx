@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import DrugCard from '@/components/DrugCard';
 import { Drug } from '../../types/drug';
+
+export const metadata: Metadata = {
+  title: 'Přehled drog',
+  description: 'Informace o nejčastějších drogách, jejich rizicích a symptomech. Přehledné karty s užitečnými daty.',
+  alternates: { canonical: '/drugs' },
+};
 
 const drugsData: Drug[] = [
   {

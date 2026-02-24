@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Hlas proti drogám",
+  description: "Tvůj život, tvoje volba – řekni drogám NE. Informace, prevence a pomoc v boji proti návykovým látkám.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

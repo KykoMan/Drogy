@@ -65,11 +65,26 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { id } = await params;
   const drug = drugsData.find((d) => d.id === Number(id));
-  const title = drug ? `${drug.name} – detail | Hlas proti drogám` : `Droga #${id} – nenalezena`;
+  const title = drug ? `${drug.name} – detail` : `Droga #${id} – nenalezena`;
   const description = drug?.description ?? "Detail drogy nebyl nalezen.";
+  const path = `/drugs/${id}`;
   return {
     title,
     description,
+    alternates: { canonical: path },
+    openGraph: {
+      title,
+      description,
+      url: path,
+      images: drug ? [{ url: drug.image, alt: drug.name }] : undefined,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: drug ? [drug.image] : undefined,
+    },
   };
 }
 

@@ -1,0 +1,20 @@
+{
+  "name": "Hlas proti drogám",
+  "short_name": "HlasProtiDrogám",
+  "icons": [
+    {
+      "src": "/icon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#F58549",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/Layout";
+
+export const metadata: Metadata = {
+  title: "Prevence",
+  description: "Praktické tipy, jak předcházet závislostem: komunikace, odolnost, poznání rizik a kdy vyhledat pomoc.",
+  alternates: { canonical: "/prevention" },
+};
 
 export default function PreventionPage() {
   return (
